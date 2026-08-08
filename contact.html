@@ -1,1 +1,154 @@
-<!doctype html><html><head><meta http-equiv="refresh" content="0; url=placeholder.html"><title>Contact | AE Cleaning Co.</title></head><body></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact AE Cleaning Co. for Commercial Cleaning and janitorial services across the Dallas–Fort Worth area." />
+    <title>Contact | AE Cleaning Co.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body class="contact-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AE Cleaning Co. home">
+        <span class="brand-mark">AE</span>
+        <span class="brand-name">Cleaning Co.</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <a class="button button-small" href="#contact-form">Request a quote</a>
+    </header>
+
+    <main>
+      <section class="contact-hero" aria-labelledby="contact-heading">
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-heading">Contact</h1>
+        <i class="rule" aria-hidden="true"></i>
+        <h2>Let’s talk about your space.</h2>
+        <p>Tell us a little about your facility and what you’re looking for. We’ll follow up to discuss your needs and next steps.</p>
+      </section>
+
+      <section class="contact-content" aria-label="Request a quote and contact details">
+        <form id="contact-form" class="quote-form" action="mailto:hello@aecleaningco.com?subject=AE%20Cleaning%20Co.%20Quote%20Request" method="post" enctype="text/plain">
+          <div class="form-heading">
+            <p class="eyebrow">Request a quote</p>
+            <h2>Tell us about your needs.</h2>
+          </div>
+          <div class="form-grid">
+            <p>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </p>
+            <p>
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </p>
+            <p>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </p>
+            <p>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </p>
+            <p>
+              <label for="facility-type">Facility type</label>
+              <select id="facility-type" name="facility type" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Office</option>
+                <option>Medical facility</option>
+                <option>Retail space</option>
+                <option>Industrial facility</option>
+                <option>Educational facility</option>
+                <option>Other</option>
+              </select>
+            </p>
+            <p>
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" required />
+            </p>
+            <p>
+              <label for="square-footage">Approximate square footage <span>(optional)</span></label>
+              <input id="square-footage" name="approximate square footage" type="number" min="0" inputmode="numeric" />
+            </p>
+            <p>
+              <label for="frequency">Desired cleaning frequency</label>
+              <select id="frequency" name="desired cleaning frequency" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Daily</option>
+                <option>Multiple times per week</option>
+                <option>Weekly</option>
+                <option>Biweekly</option>
+                <option>Monthly</option>
+                <option>Not sure yet</option>
+              </select>
+            </p>
+            <p class="field-wide">
+              <label for="message">Message / Tell us about your cleaning needs</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+          </div>
+          <button class="button" type="submit">Request a quote</button>
+        </form>
+
+        <aside class="contact-details" aria-labelledby="details-heading">
+          <p class="eyebrow">Contact details</p>
+          <h2 id="details-heading">Here when you need us.</h2>
+          <dl>
+            <div>
+              <dt>Service area</dt>
+              <dd>Dallas–Fort Worth service area</dd>
+            </div>
+            <div>
+              <dt>Business email</dt>
+              <dd><a href="mailto:hello@aecleaningco.com">hello@aecleaningco.com</a></dd>
+            </div>
+            <div>
+              <dt>Business phone</dt>
+              <dd><a href="tel:+12145550123">(214) 555-0123</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="careers-inquiry" aria-labelledby="careers-inquiry-heading">
+        <p class="eyebrow">Careers</p>
+        <h2 id="careers-inquiry-heading">Interested in joining our team?</h2>
+        <p>We’re always interested in hearing from dependable, detail-oriented people who take pride in their work.</p>
+        <a class="button button-outline" href="careers.html">Join our team</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="AE Cleaning Co. home"><span class="brand-mark">AE</span><span class="brand-name">Cleaning Co.</span></a>
+        <p>Professional commercial cleaning and janitorial services for businesses across the Fort Worth area.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="footer-links">
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <address>
+        <a href="tel:+12145550123">(214) 555-0123</a>
+        <a href="mailto:hello@aecleaningco.com">hello@aecleaningco.com</a>
+        <span>Dallas, Texas</span>
+      </address>
+      <div class="socials" aria-label="Social media"><span aria-label="LinkedIn">in</span><span aria-label="Instagram">◎</span></div>
+      <small>© 2026 AE Cleaning Co. All rights reserved.</small>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
