@@ -105,7 +105,7 @@ footer .brand-logo { width: 112px; height: 78px; filter: invert(1); transform: s
 footer a { transition: color .2s ease; }
 footer a:hover { color: var(--accent); }
 .socials { display: flex; align-items: center; gap: 19px; align-self: center; color: var(--white); font-size: 17px; font-weight: 600; }
-.socials span:last-child { font-size: 22px; font-weight: 400; }
+.socials .social-icon { font-size: 22px; font-weight: 400; }
 .footer-service-area { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(210px, .85fr) minmax(0, 2.15fr); grid-template-areas: "copy neighborhoods"; gap: clamp(30px, 5vw, 84px); margin-top: 10px; padding-top: 20px; border-top: 1px solid rgb(239 233 223 / .14); }
 .footer-service-copy { grid-area: copy; }
 .footer-service-copy h2 { margin: 0 0 10px; color: var(--white); font-family: "Cormorant Garamond", serif; font-size: clamp(1.85rem, 2.4vw, 2.6rem); font-weight: 500; letter-spacing: -.04em; line-height: 1; }

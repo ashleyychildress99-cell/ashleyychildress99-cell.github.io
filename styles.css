@@ -136,7 +136,8 @@ h2 em { font-weight: 500; }
 .hero {
   position: relative;
   display: grid;
-  height: min(63vw, 690px);
+  grid-template-rows: minmax(0, 1fr);
+  height: clamp(410px, 45vw, 470px);
   overflow: hidden;
   isolation: isolate;
 }
@@ -220,7 +221,7 @@ h2 em { font-weight: 500; }
 
 .editorial-section { display: grid; grid-template-columns: 1fr 1fr; background: var(--secondary); }
 
-.editorial-section > img { width: 100%; height: clamp(420px, 47vw, 625px); object-fit: cover; object-position: center; }
+.editorial-section > img { width: 100%; height: clamp(380px, 38vw, 500px); object-fit: cover; object-position: center; }
 
 .editorial-copy {
   display: flex;
@@ -274,7 +275,7 @@ footer a { transition: color .2s ease; }
 footer a:hover { color: var(--accent); }
 
 .socials { display: flex; align-items: center; gap: 19px; align-self: center; color: var(--white); font-size: 17px; font-weight: 600; }
-.socials span:last-child { font-size: 22px; font-weight: 400; }
+.socials .social-icon { font-size: 22px; font-weight: 400; }
 
 .footer-service-area { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(210px, .85fr) minmax(0, 2.15fr); grid-template-areas: "copy neighborhoods"; gap: clamp(30px, 5vw, 84px); margin-top: 10px; padding-top: 20px; border-top: 1px solid rgb(239 233 223 / .14); }
 .footer-service-copy { grid-area: copy; }
@@ -309,10 +310,10 @@ footer small { grid-column: 1 / -1; margin-top: 9px; padding-top: 9px; border-to
   .site-header.open nav { position: absolute; top: 83px; right: 0; left: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 24px 16px; background: var(--white); box-shadow: 0 12px 22px rgb(43 43 43 / .12); }
   .site-header.open nav a { display: block; height: auto; padding: 11px 0; font-size: 10px; }
   .site-header.open nav a::after { right: auto; bottom: 6px; width: 26px; }
-  .hero { height: 625px; }
+  .hero { height: 400px; }
   .hero-image { object-position: 63% center; }
   .hero-shade { background: linear-gradient(90deg, rgb(248 247 242 / .96) 0%, rgb(248 247 242 / .76) 64%, rgb(248 247 242 / .11) 100%); }
-  .hero-copy { width: min(495px, calc(100% - 48px)); margin-left: 24px; padding: 42px 0; }
+  .hero-copy { width: min(495px, calc(100% - 48px)); margin-left: 24px; padding: 32px 0; }
   .hero-copy p { max-width: 330px; margin: 26px 0 25px; }
   .value-section { padding-top: 46px; }
   .value-grid { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
