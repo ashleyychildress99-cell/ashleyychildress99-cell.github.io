@@ -52,28 +52,18 @@ h2 em { font-weight: 500; }
 
 .brand {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   flex: 0 0 auto;
-  color: var(--heading);
   line-height: 1;
-  text-transform: uppercase;
 }
 
-.brand-mark {
+.brand-logo {
   display: block;
-  margin-left: -.14em;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 4.1rem;
-  font-weight: 500;
-  letter-spacing: -.22em;
-}
-
-.brand-name {
-  margin-top: 2px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .18em;
+  width: 94px;
+  height: 66px;
+  object-fit: contain;
+  transform: scale(3);
+  transform-origin: center;
 }
 
 .site-header nav {
@@ -177,7 +167,7 @@ h2 em { font-weight: 500; }
   line-height: 1.55;
 }
 
-.value-section { padding: clamp(70px, 8.5vw, 130px) clamp(24px, 7.1vw, 118px) clamp(58px, 6.6vw, 104px); background: var(--background); }
+.value-section { padding: clamp(46px, 5.5vw, 84px) clamp(24px, 7.1vw, 118px) clamp(38px, 4.3vw, 68px); background: var(--background); }
 
 .section-intro { text-align: center; }
 
@@ -202,7 +192,7 @@ h2 em { font-weight: 500; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1160px;
-  margin: clamp(52px, 6.6vw, 92px) auto 0;
+  margin: clamp(34px, 4.3vw, 60px) auto 0;
 }
 
 .value-grid article {
@@ -237,45 +227,20 @@ h2 em { font-weight: 500; }
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: clamp(58px, 8.5vw, 146px) clamp(30px, 8vw, 138px);
+  padding: clamp(38px, 5.5vw, 95px) clamp(30px, 8vw, 138px);
 }
 
 .editorial-copy .rule { margin: 25px 0 21px; }
 
 .editorial-copy > p:not(.eyebrow) { max-width: 440px; margin: 0 0 29px; color: var(--heading); font-size: 13px; line-height: 1.7; }
 
-.service-area { padding: 29px clamp(24px, 6vw, 100px) 33px; background: var(--white); text-align: center; }
-.service-area .eyebrow { margin-bottom: 19px; }
-
-.client-list { display: grid; grid-template-columns: repeat(5, 1fr); max-width: 1200px; margin: auto; }
-
-.client-list span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 47px;
-  padding: 0 18px;
-  color: var(--body);
-  font-size: clamp(13px, 1.65vw, 23px);
-  font-weight: 600;
-  letter-spacing: -.04em;
-  line-height: .93;
-  opacity: .56;
-  text-transform: uppercase;
-}
-
-.client-list span + span { border-left: 1px solid var(--secondary); }
-.client-list span:nth-child(2) { font-family: "Cormorant Garamond", serif; font-size: clamp(15px, 1.7vw, 24px); font-weight: 500; letter-spacing: -.035em; text-transform: none; }
-.client-list span:nth-child(4) { font-size: clamp(10px, 1.3vw, 17px); letter-spacing: .035em; }
-.client-list span:nth-child(5) { font-weight: 400; letter-spacing: .2em; }
-
 .cta {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: clamp(20px, 2.8vw, 42px);
-  min-height: 128px;
-  padding: 26px clamp(24px, 9vw, 150px);
+  min-height: 88px;
+  padding: 18px clamp(24px, 9vw, 150px);
   background: var(--accent);
   color: var(--white);
 }
@@ -292,15 +257,14 @@ footer {
   display: grid;
   grid-template-columns: 1.55fr .72fr .72fr 1.4fr auto;
   gap: clamp(24px, 4vw, 74px);
-  padding: 52px clamp(24px, 8vw, 136px) 20px;
+  padding: 34px clamp(24px, 8vw, 136px) 13px;
   background: var(--heading);
   color: var(--secondary);
   font-size: 11px;
 }
 
-footer .brand { align-items: flex-start; color: var(--white); }
-footer .brand-mark { font-size: 4.4rem; }
-footer .brand-name { color: var(--white); }
+footer .brand { align-items: flex-start; }
+footer .brand-logo { width: 112px; height: 78px; filter: invert(1); transform: scale(3); }
 .footer-brand p { max-width: 225px; margin: 16px 0 0; color: var(--secondary); font-size: 10px; line-height: 1.6; }
 
 .footer-links,
@@ -312,7 +276,16 @@ footer a:hover { color: var(--accent); }
 .socials { display: flex; align-items: center; gap: 19px; align-self: center; color: var(--white); font-size: 17px; font-weight: 600; }
 .socials span:last-child { font-size: 22px; font-weight: 400; }
 
-footer small { grid-column: 1 / -1; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgb(239 233 223 / .14); color: var(--secondary); font-size: 10px; text-align: center; }
+.footer-service-area { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(210px, .85fr) minmax(0, 2.15fr); grid-template-areas: "copy neighborhoods"; gap: clamp(30px, 5vw, 84px); margin-top: 10px; padding-top: 20px; border-top: 1px solid rgb(239 233 223 / .14); }
+.footer-service-copy { grid-area: copy; }
+.footer-service-copy h2 { margin: 0 0 10px; color: var(--white); font-family: "Cormorant Garamond", serif; font-size: clamp(1.85rem, 2.4vw, 2.6rem); font-weight: 500; letter-spacing: -.04em; line-height: 1; }
+.footer-service-copy p { max-width: 335px; margin: 0; color: var(--secondary); font-size: 10px; line-height: 1.7; }
+.footer-service-copy .footer-city-list { margin-top: 16px; color: var(--accent); font-size: 9px; font-weight: 600; letter-spacing: .04em; line-height: 1.75; }
+.footer-service-neighborhoods { display: grid; grid-area: neighborhoods; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px clamp(22px, 3.5vw, 58px); }
+.footer-service-neighborhoods h3 { margin: 0 0 8px; color: var(--accent); font-family: "Montserrat", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.footer-service-neighborhoods p { margin: 0; color: var(--secondary); font-size: 10px; line-height: 1.8; }
+
+footer small { grid-column: 1 / -1; margin-top: 9px; padding-top: 9px; border-top: 1px solid rgb(239 233 223 / .14); color: var(--secondary); font-size: 10px; text-align: center; }
 
 @media (max-width: 900px) {
   .site-header { gap: 22px; }
@@ -323,12 +296,13 @@ footer small { grid-column: 1 / -1; margin-top: 14px; padding-top: 14px; border-
   footer { grid-template-columns: 1.6fr 1fr 1fr; }
   footer address { grid-column: 2 / 4; }
   .socials { grid-column: 3; grid-row: 1; }
+  .footer-service-area { grid-template-columns: 1fr; grid-template-areas: "copy" "neighborhoods"; gap: 28px; }
+  .footer-service-neighborhoods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 700px) {
   .site-header { min-height: 83px; padding: 10px 24px; justify-content: space-between; }
-  .brand-mark { font-size: 3.4rem; }
-  .brand-name { font-size: 8px; }
+  .brand-logo { width: 80px; height: 58px; transform: scale(2.7); }
   .site-header nav,
   .site-header > .button { display: none; }
   .menu-toggle { display: block; padding: 8px 0; border: 0; background: transparent; color: var(--heading); font-family: "Montserrat", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
@@ -340,16 +314,14 @@ footer small { grid-column: 1 / -1; margin-top: 14px; padding-top: 14px; border-
   .hero-shade { background: linear-gradient(90deg, rgb(248 247 242 / .96) 0%, rgb(248 247 242 / .76) 64%, rgb(248 247 242 / .11) 100%); }
   .hero-copy { width: min(495px, calc(100% - 48px)); margin-left: 24px; padding: 42px 0; }
   .hero-copy p { max-width: 330px; margin: 26px 0 25px; }
-  .value-section { padding-top: 70px; }
+  .value-section { padding-top: 46px; }
   .value-grid { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
   .value-grid article { min-height: auto; }
   .value-grid article:nth-child(3) { border-left: 0; }
   .editorial-section { grid-template-columns: 1fr; }
   .editorial-section > img { height: min(69vw, 490px); }
-  .editorial-copy { padding: 65px 10%; }
-  .client-list { grid-template-columns: repeat(3, 1fr); row-gap: 19px; }
-  .client-list span:nth-child(4) { border-left: 0; }
-  .cta { grid-template-columns: auto 1fr; padding-block: 34px; }
+  .editorial-copy { padding: 42px 10%; }
+  .cta { grid-template-columns: auto 1fr; padding-block: 22px; }
   .cta .button { grid-column: 1 / -1; width: 100%; }
   footer { grid-template-columns: 1fr 1fr; gap: 28px; }
   .footer-brand { grid-column: 1 / -1; }
@@ -363,11 +335,9 @@ footer small { grid-column: 1 / -1; margin-top: 14px; padding-top: 14px; border-
   .value-grid { grid-template-columns: 1fr; max-width: 300px; }
   .value-grid article + article { border-top: 1px solid var(--secondary); border-left: 0; padding-top: 38px; }
   .value-grid article:nth-child(3) { border-top: 1px solid var(--secondary); }
-  .client-list { grid-template-columns: repeat(2, 1fr); }
-  .client-list span:nth-child(3) { border-left: 0; }
-  .client-list span { padding: 8px 10px; }
   .cta { grid-template-columns: 1fr; }
   .cta-icon { display: none; }
   footer { grid-template-columns: 1fr; }
   .socials { grid-column: auto; grid-row: auto; justify-self: start; }
+  .footer-service-neighborhoods { grid-template-columns: 1fr; }
 }
