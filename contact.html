@@ -37,11 +37,16 @@
       </section>
 
       <section class="contact-content" aria-label="Request a quote and contact details">
-        <form id="contact-form" class="quote-form" action="mailto:info@aecleaningco.com?subject=AE%20Cleaning%20Co.%20Quote%20Request" method="post" enctype="text/plain">
+        <form id="contact-form" class="quote-form" action="https://formsubmit.co/info@aecleaningco.com" method="post" accept-charset="UTF-8">
           <div class="form-heading">
             <p class="eyebrow">Request a quote</p>
             <h2>Tell us about your needs.</h2>
           </div>
+          <input type="hidden" name="_subject" value="New AE Cleaning Co. quote request" />
+          <input type="hidden" name="_next" value="https://aecleaningco.com/thank-you.html" />
+          <input type="hidden" name="_url" value="https://aecleaningco.com/contact.html" />
+          <input type="hidden" name="_template" value="table" />
+          <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-grid">
             <p>
               <label for="name">Name</label>
